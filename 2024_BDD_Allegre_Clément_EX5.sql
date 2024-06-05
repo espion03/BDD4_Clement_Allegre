@@ -1,0 +1,1 @@
+UPDATE materiel SET materiel.Quantité = materiel.Quantité - 1 WHERE materiel.id_materiel = 1;

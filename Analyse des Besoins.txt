@@ -1,0 +1,33 @@
+Utilisateur
+
+id_etudiant (int, clé primaire) : Identifiant unique de l'etudiant
+nom (varchar) : Nom de famille de l'etudiant
+prenom (varchar) : Prénom de l'etudiant
+email (varchar) : Adresse email de l'etudiant
+
+Matériel
+
+id_materiel (int, clé primaire) : Identifiant unique du matériel
+type (varchar) : type du matériel
+description (text) : Description détaillée du matériel
+quantite (int) : Quantité disponible de ce matériel
+
+Réservation
+
+id_reservation (int, clé primaire) : Identifiant unique de la réservation
+nb_reservation (int) : Numero de reservation
+date_debut (datetime) : Date et heure de début de la réservation
+date_fin (datetime) : Date et heure de fin de la réservation
+id_etudiant (int, clé étrangère) : Référence à l'utilisateur qui a fait la réservation
+id_materiel (int, clé étrangère) : Référence au matériel réservé
+
+
+Chaque etudiant peut avoir 1 ou plusieurs reservation, avec 1 ou plusieurs materiel
+
+Chaque reservation concerne 1 materiel
+Donc pour un numero, d'une seule reservation il peut exister plusieurs id_reservation avec tous les materiels reserver par 1 seul etudiant.
+
+
+Aidé par : 
+Romain Brouard
+Sam Boulanger
